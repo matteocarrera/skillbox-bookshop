@@ -1,6 +1,6 @@
 package ru.skillbox.bookshop.controller;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,7 +9,7 @@ import ru.skillbox.bookshop.service.BookService;
 
 @Controller
 @RequestMapping("/bookshop")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class MainPageController {
 
     private final BookService bookService;
