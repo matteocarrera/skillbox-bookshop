@@ -1,4 +1,3 @@
--- Books
 insert into books (title, authorId, priceOld, price) values ('exploit real-time e-commerce', 1, '$203.23', '$43.37');
 insert into books (title, authorId, priceOld, price) values ('utilize real-time interfaces', 2, '$260.31', '$35.96');
 insert into books (title, authorId, priceOld, price) values ('extend strategic e-services', 3, '$272.00', '$151.04');
@@ -24,30 +23,3 @@ insert into books (title, authorId, priceOld, price) values ('implement user-cen
 insert into books (title, authorId, priceOld, price) values ('utilize magnetic supply-chains', 23, '$279.70', '$77.86');
 insert into books (title, authorId, priceOld, price) values ('e-enable dot-com supply-chains', 24, '$297.83', '$110.15');
 insert into books (title, authorId, priceOld, price) values ('facilitate efficient eyeballs', 25, '$232.30', '$131.48');
-
--- Authors
-insert into authors (firstName, secondName) values ('Drucie', 'Goodbourn');
-insert into authors (firstName, secondName) values ('Marcia', 'Aggiss');
-insert into authors (firstName, secondName) values ('Giovanni', 'Bigg');
-insert into authors (firstName, secondName) values ('Duffie', 'Eynon');
-insert into authors (firstName, secondName) values ('Anselma', 'McKennan');
-insert into authors (firstName, secondName) values ('Gert', 'Kira');
-insert into authors (firstName, secondName) values ('Clerc', 'Djakovic');
-insert into authors (firstName, secondName) values ('Stacee', 'Elsy');
-insert into authors (firstName, secondName) values ('Dorotea', 'Bonhill');
-insert into authors (firstName, secondName) values ('Minni', 'Bunney');
-insert into authors (firstName, secondName) values ('Berty', 'Gandley');
-insert into authors (firstName, secondName) values ('Raynard', 'Tesdale');
-insert into authors (firstName, secondName) values ('Joanna', 'Hutfield');
-insert into authors (firstName, secondName) values ('Dannie', 'Glidder');
-insert into authors (firstName, secondName) values ('Timmie', 'Adshede');
-insert into authors (firstName, secondName) values ('Fernando', 'Neads');
-insert into authors (firstName, secondName) values ('Teddy', 'Guilliland');
-insert into authors (firstName, secondName) values ('Paloma', 'Grebert');
-insert into authors (firstName, secondName) values ('Kristos', 'Usher');
-insert into authors (firstName, secondName) values ('Darcey', 'Usher');
-insert into authors (firstName, secondName) values ('Cristie', 'Isacsson');
-insert into authors (firstName, secondName) values ('Lindsay', 'Coutthart');
-insert into authors (firstName, secondName) values ('Helyn', 'Schneidar');
-insert into authors (firstName, secondName) values ('Bette-ann', 'Askem');
-insert into authors (firstName, secondName) values ('Dom', 'Robuchon');

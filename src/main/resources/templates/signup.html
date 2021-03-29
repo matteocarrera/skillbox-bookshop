@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head_fragment :: headFragment(title = #{footer.signup})}"></head>
+<body class="Site">
+<header th:replace="~{fragments/header_fragment :: headerFragment(page = 0)}"></header>
+<div class="Middle Middle_form">
+    <div class="Middle-top">
+        <div class="wrap">
+            <h1 class="Middle-title" th:text="#{footer.signup}">
+            </h1>
+        </div>
+    </div>
+    <div class="wrap">
+        <main class="Middle-main">
+            <form class="form Login Login_registration" action="#" method="post">
+                <div class="Login-ins">
+                    <div class="Login-step">
+                        <div class="form-group">
+                            <input class="form-input" id="name" name="name" type="text" th:placeholder="#{register.placeholder.name}"
+                                   data-validate="require"/>
+                        </div>
+                        <div class="form-group form-group_row">
+                            <div class="form-group">
+                                <input class="form-input form-input_phone" id="phone" name="phone" type="text"
+                                       th:placeholder="#{register.placeholder.phone}" data-mask="+7 (999) 999-99-99"
+                                       data-validate="require"/>
+                            </div>
+                            <div class="form-group form-group_key">
+                                <input class="form-input form-input_code" id="phoneCode" name="phoneCode" type="text"
+                                       th:placeholder="#{register.placeholder.messagecode}" data-mask="999 999" data-validate="require key"/>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn_success btn_sm form-btn" type="button" name="submitPhone"
+                                        disabled="disabled" id="submitPhone" th:text="#{register.submit}">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group form-group_row">
+                            <div class="form-group">
+                                <input class="form-input form-input_mail" id="mail" name="mail" type="text"
+                                       th:placeholder="#{register.placeholder.email}" data-validate="mail require"/>
+                            </div>
+                            <div class="form-group form-group_key">
+                                <input class="form-input form-input_code" id="mailCode" name="mailCode" type="text"
+                                       th:placeholder="#{register.placeholder.emailcode}" data-mask="999 999" data-validate="require key"/>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn_success btn_sm form-btn" type="button" name="submitMail"
+                                        disabled="disabled" id="submitMail" th:text="#{register.submit}">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group form-group_center">
+                            <button class="btn btn_primary form-btn" type="button" name="registration" id="registration"
+                                    disabled="disabled" th:text="#{register.confirmregistration}">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+</div>
+<footer th:replace="~{fragments/footer_fragment :: footerFragment}"></footer>
+</body>
+</html>
