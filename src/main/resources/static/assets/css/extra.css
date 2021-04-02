@@ -176,7 +176,7 @@
 }
 .Authors-links {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 990px) {
   .Authors-links {
@@ -191,7 +191,8 @@
 }
 .Authors-title {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px !important;
 }
 .Authors-title a {
   cursor: default;
@@ -203,7 +204,7 @@
   border: none;
 }
 .Authors-letter {
-  margin-top: 30px;
+  margin-top: 10px;
   -moz-columns: 3;
        columns: 3;
   columns-gap: 20px;

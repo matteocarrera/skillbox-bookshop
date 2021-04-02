@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head_fragment :: headFragment(title = #{topbar.main})}"></head>
+<body class="Site">
+<header th:replace="~{fragments/header_fragment :: headerFragment(page = 1)}"></header>
+<div class="Middle">
+    <div class="wrap">
+        <main class="Middle-main">
+            <div class="Section">
+                <div class="Section-header">
+                    <h2 class="Section-title" th:text="#{main.recommended}">
+                    </h2>
+                </div>
+                <div class="Slider Slider_carousel">
+                    <div class="Slider-box Cards" data-load="recommended" data-loadoffset="8" data-loadlimit="20">
+                        <div class="Slider-item" th:each="book : ${bookData}">
+                            <div class="Slider-content">
+                                <div class="Card">
+                                    <a class="Card-picture" href="/books/slug.html">
+                                        <img src="/assets/img/content/main/card.jpg" alt="card.jpg"/>
+                                    </a>
+                                    <div class="Card-content">
+                                        <strong class="Card-title">
+                                            <a href="/books/slug.html" th:text="${book.title}"></a>
+                                        </strong>
+                                        <div class="Card-description" th:text="${book.author}"></div>
+                                        <div class="Card-cost">
+                                            <span class="Card-priceOld" th:text="${book.priceOld}"></span>
+                                            <span class="Card-price" th:text="${book.price}"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Slider-navigateWrap">
+                        <div class="Slider-navigate">
+                        </div>
+                    </div>
+                    <div class="Slider-load">
+                        <div class="Slider-load-text" th:text="#{slider.loading}">
+                        </div>
+                    </div>
+                </div>
+                <div class="Section-header">
+                    <h2 class="Section-title" th:text="#{main.recent}">
+                    </h2>
+                </div>
+                <div class="Slider Slider_carousel">
+                    <div class="Slider-box Cards" data-load="recent" data-loadoffset="8" data-loadlimit="20">
+                        <div class="Slider-item" th:each="book : ${bookData}">
+                            <div class="Slider-content">
+                                <div class="Card">
+                                    <a class="Card-picture" href="/books/slug.html">
+                                        <img src="/assets/img/content/main/card.jpg" alt="card.jpg"/>
+                                    </a>
+                                    <div class="Card-content">
+                                        <strong class="Card-title">
+                                            <a href="/books/slug.html" th:text="${book.title}"></a>
+                                        </strong>
+                                        <div class="Card-description" th:text="${book.author}"></div>
+                                        <div class="Card-cost">
+                                            <span class="Card-priceOld" th:text="${book.priceOld}"></span>
+                                            <span class="Card-price" th:text="${book.price}"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Slider-navigateWrap">
+                        <div class="Slider-navigate">
+                        </div>
+                    </div>
+                    <div class="Slider-load">
+                        <div class="Slider-load-text" th:text="#{slider.loading}">
+                        </div>
+                    </div>
+                </div>
+                <div class="Section-header">
+                    <h2 class="Section-title" th:text="#{main.popular}">
+                    </h2>
+                </div>
+                <div class="Slider Slider_carousel">
+                    <div class="Slider-box Cards" data-load="popular" data-loadoffset="8" data-loadlimit="20">
+                        <div class="Slider-item" th:each="book : ${bookData}">
+                            <div class="Slider-content">
+                                <div class="Card">
+                                    <a class="Card-picture" href="/books/slug.html">
+                                        <img src="/assets/img/content/main/card.jpg" alt="card.jpg"/>
+                                    </a>
+                                    <div class="Card-content">
+                                        <strong class="Card-title">
+                                            <a href="/books/slug.html" th:text="${book.title}"></a>
+                                        </strong>
+                                        <div class="Card-description" th:text="${book.author}"></div>
+                                        <div class="Card-cost">
+                                            <span class="Card-priceOld" th:text="${book.priceOld}"></span>
+                                            <span class="Card-price" th:text="${book.price}"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Slider-navigateWrap">
+                        <div class="Slider-navigate">
+                        </div>
+                    </div>
+                    <div class="Slider-load">
+                        <div class="Slider-load-text" th:text="#{slider.loading}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="Middle-title" th:text="#{main.tags}">
+            </h2>
+            <div class="Tags" id="tags">
+                <div class="Tag Tag_xs"><a href="/tags/index.html" th:text="#{tag.modernLiterature}"></a>
+                </div>
+                <div class="Tag Tag_sm"><a href="/tags/index.html" th:text="#{tag.classicLiterature}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.foreignLiterature}"></a>
+                </div>
+                <div class="Tag Tag_md"><a href="/tags/index.html" th:text="#{tag.fantasy}"></a>
+                </div>
+                <div class="Tag Tag_lg"><a href="/tags/index.html" th:text="#{tag.englishLiterature}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.russianLiterature}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.americanLiterature}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.fiction}"></a>
+                </div>
+                <div class="Tag Tag_md"><a href="/tags/index.html" th:text="#{tag.childrenLiterature}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.detective}"></a>
+                </div>
+                <div class="Tag Tag_sm"><a href="/tags/index.html" th:text="#{tag.love}"></a>
+                </div>
+                <div class="Tag Tag_sm"><a href="/tags/index.html" th:text="#{tag.mystic}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.humor}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.adventures}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.story}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.frenchLiterature}"></a>
+                </div>
+                <div class="Tag Tag_xs"><a href="/tags/index.html" th:text="#{tag.england}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.imaginativeLiterature}"></a>
+                </div>
+                <div class="Tag Tag_xs"><a href="/tags/index.html" th:text="#{tag.psychology}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.philosophy}"></a>
+                </div>
+                <div class="Tag Tag_lg"><a href="/tags/index.html" th:text="#{tag.filmed}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.beloved}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.dystopia}"></a>
+                </div>
+                <div class="Tag Tag_xs"><a href="/tags/index.html" th:text="#{tag.mustHave}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.novel}"></a>
+                </div>
+                <div class="Tag Tag_md"><a href="/tags/index.html" th:text="#{tag.france}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.giveMeTwo}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.youngAdult}"></a>
+                </div>
+                <div class="Tag Tag_lg"><a href="/tags/index.html" th:text="#{tag.war}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.history}"></a>
+                </div>
+                <div class="Tag Tag_sm"><a href="/tags/index.html" th:text="#{tag.flashMob2020}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.childhood}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.life}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.drama}"></a>
+                </div>
+                <div class="Tag Tag_md"><a href="/tags/index.html" th:text="#{tag.russia}"></a>
+                </div>
+                <div class="Tag Tag_md"><a href="/tags/index.html" th:text="#{tag.bookTravel}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.sovietLiterature}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.thriller}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.america}"></a>
+                </div>
+                <div class="Tag Tag_sm"><a href="/tags/index.html" th:text="#{tag.germanLiterature}"></a>
+                </div>
+                <div class="Tag Tag_xs"><a href="/tags/index.html" th:text="#{tag.vampires}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.schoolProgram}"></a>
+                </div>
+                <div class="Tag Tag_xs"><a href="/tags/index.html" th:text="#{tag.stories}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.magic}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.kids}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.russianClassic}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.flashMob2021}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.biography}"></a>
+                </div>
+                <div class="Tag"><a href="/tags/index.html" th:text="#{tag.english}"></a>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<footer th:replace="~{fragments/footer_fragment :: footerFragment}"></footer>
+</body>
+</html>
